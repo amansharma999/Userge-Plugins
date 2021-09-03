@@ -45,7 +45,7 @@ async def web(message: Message):
             await message.err("Process Canceled!")
             return
     hosts = {
-        "anonfiles": 'curl -F "file=@{}" https://anonfiles.com/api/upload',
+        "anonfiles": 'curl -F "file=@{}" https://api.anonfiles.com/upload',
         "transfer": 'curl --upload-file "{}" https://transfer.sh/'
         + os.path.basename(file_name),
         "filebin": 'curl -X POST --data-binary "@test.png" -H "filename'
